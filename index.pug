@@ -1,0 +1,132 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title web demo
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+     
+        link(rel="stylesheet", href="asset/style.css")
+        link(rel="stylesheet", href="grid/grid.css")
+        link(rel="stylesheet", href="reponsive/reponsive.css")
+        link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+    body 
+    - const img = ["https://nguyenvanuoc.github.io/flowbase/assets/images/Hero3D.png","https://nguyenvanuoc.github.io/flowbase/assets/images/feature1.png","https://nguyenvanuoc.github.io/flowbase/assets/images/feature2.png"]
+    - const imgIcon = ["https://nguyenvanuoc.github.io/flowbase/assets/images/icon-card.png","https://nguyenvanuoc.github.io/flowbase/assets/images/pricing.png","https://nguyenvanuoc.github.io/flowbase/assets/images/retention.png"]
+     
+     .header 
+      .grid.wide 
+       .row 
+        .col.l-3.m-6.c-6
+          img(src="https://nguyenvanuoc.github.io/flowbase/assets/images/Logo.svg", alt="", srcset="")
+        .col.l-6.m-6.c-6
+         .menu__tablet 
+          <i class="menu fas fa-bars"></i>
+         ul.header__nav 
+          li.main__color Home 
+          li Features
+          li Pricing
+          li Blog
+  
+        .col.l-3.m-6.c-6
+         .content__block
+          p.get__start Get Started 
+
+     .slider  
+
+      .grid.wide 
+       .row 
+        .col.l-6.m-12.c-12
+         .slider__info
+          p.title Grow your subscription business
+          p.slider__about Outcome-centered products that reduce churn, optimize pricing, and grow your subscription business end-to-end.
+          p.get__start Get Started 
+        .col.l-6.m-12.c-12
+         .slider__img
+          img(src=img[0] , alt="", srcset="")
+     .content 
+      .content__block
+       .grid.wide 
+        .row 
+          each i in ["https://nguyenvanuoc.github.io/flowbase/assets/images/partners/1.svg","https://nguyenvanuoc.github.io/flowbase/assets/images/partners/2.svg","https://nguyenvanuoc.github.io/flowbase/assets/images/partners/3.svg","https://nguyenvanuoc.github.io/flowbase/assets/images/partners/4.svg"]
+           .col.l-3.m-3.c-12
+            img(src=i , alt="")
+      .content__info 
+       .grid.wide 
+        .row 
+         .col.l-6.m-12.c-12
+          .img__block-0
+           img(src=img[1] , alt="", srcset="")
+         .col.l-6.m-12.c-12
+          .content__txt
+           p.title Subscription index
+           p.about A daily dataset to keep you up to date on subscription market trends and what's happening in your vertical.
+           p.learn__more Learn More
+      .content__info 
+       .grid.wide 
+        .row 
+         .col.l-6.m-12.c-12 
+          .content__txt
+           p.title In-depth metrics
+           p.about Accurate, real-time reporting at your fingertips. Getting data has never been easier.
+           p.learn__more Learn more
+         .col.l-6.m-12.c-12
+          .img__block
+            img(src=img[2] , alt="", srcset="")
+      .content__features 
+       .grid.wide 
+        .row
+         .col.l-4.m-12.c-12
+          img(src=imgIcon[0] , alt="", srcset="")
+          p.title Benchmarks
+          p.about Benchmark the health of your monetization and pricing strategy.
+         .col.l-4.m-12.c-12
+          img(src=imgIcon[1] , alt="", srcset="")
+          p.title Pricing Audit
+          p.about Audit where revenue leakage exists and where you can increase retention.
+         .col.l-4.m-12.c-12
+          img(src=imgIcon[2] , alt="", srcset="")
+          p.title Retention Audit
+          p.about See how you stack up against comparable companies in similar stages.
+      .content__pricing 
+       .grid.wide 
+        .row 
+         .col.l-9.m-12
+          p.title Get the right plan for future product.
+         .col.l-3.c-12
+          .member__box
+           p.yearLy Yearly 
+           p.Monthly MonthLy
+      .section__box 
+       .grid.wide 
+        .row 
+         .col.l-4.m-12.c-12
+          .section
+           p.title Starter
+            p.section__heading Free
+             p.about 1 Website <br> <br> 5 GB Hosting <br> <br>Limited Support
+              p.get__start Get Started
+         .col.l-4.m-12.c-12
+          .section.section__block-1
+           p.title Premium
+            p.section__heading $29
+             p.about 10 Website <br> <br> 15 GB Hosting<br> <br>Premium Support
+              p.get__start Get Started
+         .col.l-4.m-12.c-12
+          .section
+           p.title Enterprise
+            p.section__heading $49
+             p.about Unlimited Website <br> <br>50 GB Hosting<br> <br>Premium Support
+              p.get__start Get Started
+     .modal 
+      .content__modal 
+       ul.content__modal-nav 
+        li.border Home
+        li Features
+        li Pricing
+        li Blog
+     .background
+    script(src="app/main.js") 
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js") 
+    
